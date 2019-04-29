@@ -1,0 +1,38 @@
+{
+  "load_extensions": {
+    "code_prettify/autopep8": false,
+    "execute_time/ExecuteTime": true,
+    "code_prettify/code_prettify": true,
+    "rise/main": true,
+    "jupyter-js-widgets/extension": true,
+    "spellchecker/main": true,
+    "snippets_menu/main": true,
+    "table_beautifier/main": true,
+    "python-markdown/main": true
+  },
+  "rise": {
+    "autolaunch": false,
+    "enable_chalkboard": false,
+    "backimage": "",
+    "scroll": true
+  },
+  "MarkdownCell": {
+    "cm_config": {
+      "lineWrapping": true
+    }
+  },
+  "CodeCell": {
+    "cm_config": {
+      "lineWrapping": true,
+      "lineNumbers": true
+    }
+  },
+  "code_prettify": {
+    "kernel_config_map_json": "{\n  \"python\": {\n    \"library\": \"import json\\ndef yapf_reformat(cell_text):\\n    from yapf import file_resources\\n    import os\\n    import yapf.yapflib.yapf_api\\n    import re\\n    style_config = file_resources.GetDefaultStyleForDir(os.getcwd())\\n    cell_text = re.sub('^%', '#%#', cell_text, flags=re.M)\\n    reformated_text = yapf.yapflib.yapf_api.FormatCode(cell_text, style_config=style_config)[0]\\n    return re.sub('^#%#', '%', reformated_text, flags=re.M)\",\n    \"prefix\": \"print(json.dumps(yapf_reformat(u\",\n    \"postfix\": \")))\"\n  },\n  \"r\": {\n    \"library\": \"library(formatR)\\nlibrary(jsonlite)\",\n    \"prefix\": \"cat(toJSON(paste(tidy_source(text=\",\n    \"postfix\": \", output=FALSE)[['text.tidy']], collapse='\\n')))\"\n  },\n  \"javascript\": {\n    \"library\": \"jsbeautify = require('js-beautify')\",\n    \"prefix\": \"console.log(JSON.stringify(jsbeautify.js_beautify(\",\n    \"postfix\": \")));\"\n  }\n}\n"
+  },
+  "snippets": {
+    "include_custom_menu": true,
+    "custom_menu_content": "{\n    \"name\" : \"Metis\",\n    \"sub-menu\" : [\n{\n            \"name\" : \"code block\",\n            \"snippet\" :[\n    \"#######################\",\n    \"# standard code block #\",\n    \"#######################\",\n    \"\",\n    \"# see https://ipython.readthedocs.io/en/stable/interactive/magics.html\",\n    \"%pylab inline\",\n    \"\",\n    \"# sets backend to render higher res images\",\n    \"%config InlineBackend.figure_formats = ['retina']\",\n    \"\",\n    \"#######################\",\n    \"#       imports       #\",\n    \"#######################\",\n    \"# import pandas as pd\",\n    \"import seaborn as sns\",\n    \"# import sklearn\",\n    \"\",\n    \"sns.set_style(\\\"whitegrid\\\")\"\n]\n        },\n        {\n            \"name\" : \"function_with_types_in_docstring\",\n            \"snippet\" : [\"    \\\"\\\"\\\"Example function with types documented in the docstring.\",\n \"\",\n \"    `PEP 484`_ type annotations are supported. If attribute, parameter, and\",\n \"    return types are annotated according to `PEP 484`_, they do not need to be\",\n \"    included in the docstring:\",\n \"\",\n \"    Args:\",\n \"        param1 (int): The first parameter.\",\n \"        param2 (str): The second parameter.\",\n \"\",\n \"    Returns:\",\n \"        bool: The return value. True for success, False otherwise.\",\n \"\",\n \"    .. _PEP 484:\",\n \"        https://www.python.org/dev/peps/pep-0484/\",\n \"\",\n \"    \\\"\\\"\\\"\"]\n        }\n    ]\n}\n",
+    "insert_before_sibling": true
+  }
+}

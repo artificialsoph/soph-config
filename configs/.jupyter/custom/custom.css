@@ -1,0 +1,96 @@
+@import url("https://soph.info/metis/nb.css");
+
+.CodeMirror pre, .CodeMirror-dialog, .CodeMirror-dialog .CodeMirror-search-field, .terminal-app .terminal {
+  font-family: "OperatorMonoSSmLig Nerd Font";
+  /* font-size: 12pt; */
+  font-variant-ligatures: initial;
+}
+
+/* .CodeMirror pre {
+  font-family: Operator Mono SSm;
+} */
+.cm-s-soft-era.CodeMirror {
+  background: #fffdfd;
+  color: #202020;
+}
+.cm-s-soft-era span.cm-comment,
+.cm-s-soft-era span.cm-atom,
+.cm-s-soft-era span.cm-number,
+.cm-s-soft-era span.cm-property,
+.cm-s-soft-era span.cm-attribute,
+.cm-s-soft-era span.cm-keyword,
+.cm-s-soft-era span.cm-string,
+.cm-s-soft-era span.cm-variable,
+.cm-s-soft-era span.cm-variable-2,
+.cm-s-soft-era span.cm-def,
+.cm-s-soft-era span.cm-bracket,
+.cm-s-soft-era span.cm-tag,
+.cm-s-soft-era span.cm-link {
+  color: rgba(157, 157, 157, 0.6);
+}
+.cm-s-soft-era span.cm-builtin {
+  color: #ec57b4;
+}
+.cm-s-soft-era span.cm-comment {
+  color: rgba(157, 157, 157, 0.6);
+}
+.cm-s-soft-era span.cm-string {
+  color: #ba989c;
+}
+.cm-s-soft-era span.cm-number {
+  color: #25b7b8;
+}
+.cm-s-soft-era span.cm-variable {
+  color: #a29acb;
+}
+.cm-s-soft-era span.cm-keyword {
+  color: #db90a7;
+}
+.cm-s-soft-era span.cm-property {
+  color: #cb8dd7;
+}
+.cm-s-soft-era span.cm-keyword,
+.cm-s-soft-era span.cm-comment,
+.cm-s-soft-era span.cm-builtin {
+  font-style: italic;
+}
+.cm-s-soft-era span.cm-error {
+  background: #ac4142;
+  color: #505050;
+}
+.cm-s-soft-era div.CodeMirror-selected {
+  background: #e0e0e0;
+}
+.cm-s-soft-era .CodeMirror-line::selection,
+.cm-s-soft-era .cm-s-soft-era .CodeMirror-line > span::selection,
+.cm-s-soft-era .cm-s-soft-era .CodeMirror-line > span > span::selection {
+  background: #fffdfd;
+}
+.cm-s-soft-era .CodeMirror-line::-moz-selection,
+.cm-s-soft-era .cm-s-soft-era .CodeMirror-line > span::-moz-selection,
+.cm-s-soft-era .cm-s-soft-era .CodeMirror-line > span > span::-moz-selection {
+  background: #e0e0e0;
+}
+.cm-s-soft-era .CodeMirror-gutters {
+  background: #f5f5f5;
+  border-right: 0px;
+}
+.cm-s-soft-era .CodeMirror-guttermarker {
+  color: #ac4142;
+}
+.cm-s-soft-era .CodeMirror-guttermarker-subtle {
+  color: #b0b0b0;
+}
+.cm-s-soft-era .CodeMirror-linenumber {
+  color: #b0b0b0;
+}
+.cm-s-soft-era .CodeMirror-cursor {
+  border-left: 1px solid #505050;
+}
+.cm-s-soft-era .CodeMirror-activeline-background {
+  background: #DDDCDC;
+}
+.cm-s-soft-era .CodeMirror-matchingbracket {
+  color: #f5f5f5 !important;
+  background-color: #6A9FB5 !important;
+}
