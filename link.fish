@@ -1,3 +1,5 @@
+
 for path in (pwd)/configs/.*
-    ln -sFv "$path" ~
+    sudo -H rm -rf ~/(basename $path)
+    ln -sv $path ~
 end
